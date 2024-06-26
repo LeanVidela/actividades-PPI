@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Juego de Memoria</title>
+      <link rel="stylesheet" href="/juego de cartas v2/styles.css">
+</head>
+
+<body>
+      <div class="contenedor-juego">
+            <div class="cabecera">
+                  <h1>Juego de Memoria</h1>
+                  <p>Selecciona la cantidad de cartas y comienza a jugar!</p>
+            </div>
+            <div class="controles" id="controles">
+                  <label for="numCartas">Selecciona la cantidad de cartas (par):</label>
+                  <input type="number" id="numCartas" min="2" max="2" step="2" value="">
+                  <button id="iniciarJuego">Iniciar Juego</button>
+            </div>
+            <button id="reiniciarJuego" style="display: none;">Reiniciar</button>
+            <div class="tablero-juego" id="tableroJuego">
+                  <!-- Las tarjetas del juego se generarán aquí -->
+            </div>
+      </div>
+      <script src="/juego de cartas v2/scripts.js"></script>
+</body>
+
+</html>

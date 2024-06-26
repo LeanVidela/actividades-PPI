@@ -1,0 +1,172 @@
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+}
+
+.contenedor-juego {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera {
+      text-align: center;
+      margin-bottom: 20px;
+}
+
+.cabecera h1 {
+      font-size: 2rem;
+      color: #4CAF50;
+}
+
+.cabecera p {
+      font-size: 1rem;
+      color: #555;
+}
+
+.controles {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+}
+
+.controles label {
+      margin-right: 10px;
+      font-size: 1rem;
+      color: #333;
+}
+
+.controles input {
+      margin-right: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+}
+
+.controles button,
+#reiniciarJuego {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+}
+
+.controles button:hover,
+#reiniciarJuego:hover {
+      background-color: #45a049;
+}
+
+.tablero-juego {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(4,1fr);
+}
+
+.tarjeta {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 5px;
+      user-select: none;
+      position: relative;
+      transform: rotateY(0deg);
+      transition: transform 0.5s, background-color 0.5s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta.volteada .frente {
+      transform: rotateY(180deg);
+}
+
+.tarjeta.volteada .detras {
+      transform: rotateY(0deg);
+}
+
+.tarjeta .frente,
+.tarjeta .detras {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+}
+
+.tarjeta .frente {
+      background-color: #fff;
+}
+
+.tarjeta .detras {
+      background-color: #333;
+      color: #fff;
+      transform: rotateY(180deg);
+      background-size: cover;
+      background-position: center;
+}
+
+.tarjeta.emparejada {
+      background-color: #a0ffa0;
+      animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+
+      0%,
+      100% {
+            transform: translateY(0);
+      }
+
+      50% {
+            transform: translateY(-10px);
+      }
+}
+
+.tarjeta.incorrecta {
+      background-color: #ffa0a0;
+      animation: shake 0.5s;
+}
+
+@keyframes shake {
+      0% {
+            transform: translateX(0);
+      }
+
+      25% {
+            transform: translateX(-5px);
+      }
+
+      50% {
+            transform: translateX(5px);
+      }
+
+      75% {
+            transform: translateX(-5px);
+      }
+
+      100% {
+            transform: translateX(0);
+      }
+}
