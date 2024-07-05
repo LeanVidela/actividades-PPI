@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             setTimeout(() => {
                   rabbit.classList.remove('up');
                   if (!timeUp) peep();
-            }, 1500); // Conejo permanece visible por 1.5 segundos, esta representado en milisegundos
+            }, 2000); // Conejo permanece visible por 2 segundos, esta representado en milisegundos
       }
 
       function startGame() {
