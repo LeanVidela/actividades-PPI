@@ -39,7 +39,11 @@ h1 {
 .rabbit {
       width: 80px;
       height: 80px;
-      background-color: #fff;
+      /* background-color: #43ef1c;  */
+      background-image: url('/Topos/Images/Rabbit.png') ;
+      /* background-size: 10%; */
+      background-size: cover;
+      background-position: center;
       border-radius: 50%;
       position: absolute;
       bottom: -100px;
@@ -48,7 +52,7 @@ h1 {
       align-items: center;
       justify-content: center;
       transition: all 0.3s ease;
-      cursor: pointer;
+      cursor: pointer;   
 }
 
 .rabbit.up {
