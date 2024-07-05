@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-      color: #333;
+      color: #31c90b;
 }
 
 .question-container {
@@ -30,8 +30,9 @@ h1 {
 .hole {
       width: 100px;
       height: 100px;
-      background-color: #8b4513;
-      border-radius: 50%;
+      display: flex;
+      background-color: #0e57df;
+      border-radius: 100%;
       position: relative;
       overflow: hidden;
 }
@@ -39,9 +40,9 @@ h1 {
 .rabbit {
       width: 80px;
       height: 80px;
-      /* background-color: #43ef1c;  */
-      background-image: url('/Topos/Images/Rabbit.png') ;
-      /* background-size: 10%; */
+      background-color: #43ef1c; 
+      /* background-image: url('/Topos/Images/Rabbit.png') ; */
+      background-size: 10%;
       background-size: cover;
       background-position: center;
       border-radius: 50%;
@@ -53,6 +54,8 @@ h1 {
       justify-content: center;
       transition: all 0.3s ease;
       cursor: pointer;   
+      color: #0a0000; /* Cambia el color del texto según necesites */
+      text-shadow: 1px 1px 2px rgb(248, 247, 247); /* Opcional: mejora la legibilidad del texto */
 }
 
 .rabbit.up {
@@ -61,5 +64,6 @@ h1 {
 
 .scoreboard {
       font-size: 24px;
-      color: #333;
+      color: #f60606;
 }
+
