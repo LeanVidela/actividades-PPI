@@ -1,6 +1,6 @@
 // script.js
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
       const holes = document.querySelectorAll('.hole');
       const scoreBoard = document.querySelector('#score');
       const rabbits = document.querySelectorAll('.rabbit');
