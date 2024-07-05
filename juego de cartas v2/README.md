@@ -1,0 +1,1 @@
+Juego de memoria utilizando cartas. Con un máximo de 8 pares.
